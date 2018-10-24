@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h2>{{ post.titre }}</h2>
+
+    <div class="single" href="index_dev.php/blog/{{ post.slug }}">
+        <p>Auteur : {{ post.auteur }}</p>
+        <p>Date : {{ post.date }}</p>
+        <p>{{ post.contenu }}</p>
+    </div>
+
+    <button id="button" class="return" onclick="window.location.href='/blog-slim/public/blog'">Voir les autres articles</button>
+    <button id="button" onclick="window.location.href='/blog-slim/public/edit/{{ post.slug }}'">Editer l'article</button>
+    <form action="/blog-slim/public/delete/{{post.slug}}" method="POST">
+        <input id="button" class="supp" type="submit" value="Supprimer l'article">
+    </form>
+
+{% endblock %}

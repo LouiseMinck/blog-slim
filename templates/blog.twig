@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>Blog</h1>
+
+    {% for post in posts %}
+    <a href="blog/{{ post.slug }}">
+
+        
+        <div class="post">
+            <h3>{{ post.titre }}</h3>
+            <p>Auteur : {{ post.auteur }}</p>
+            <p>Date : {{ post.date }}</p>
+          </div>
+    </a>
+    {% endfor %}
+
+    <button id="button" class="return" onclick="window.location.href='/blog-slim/public/'">Retour</button>
+    <button id="button" onclick="window.location.href='/blog-slim/public/insert'">Ajouter un article</button>
+
+{% endblock %}

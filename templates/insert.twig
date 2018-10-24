@@ -1,0 +1,23 @@
+{% extends "layout.twig" %}
+
+    {% block content %}
+        <h1>salut</h1>
+
+        <form method="POST">
+
+            Titre :
+            <input type="text" name="titre"/><br/>
+
+            Auteur :
+            <input type="text" name="auteur"/><br/>
+
+            Contenu :
+            <textarea name="contenu">Texte</textarea>
+
+            <input type="submit" value="Ajouter"/>
+
+        </form>
+
+        <button id="button" class="return" onclick="window.location.href='/blog-slim/public/blog'">Retour</button>
+
+{% endblock %}
